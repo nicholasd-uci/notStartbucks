@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS coffee_db;
+
+CREATE DATABASE coffee_db;
+
+USE coffee_db;
+CREATE TABLE items (
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    text VARCHAR(25) NOT NULL,
+    isDone BOOL NOT NULL DEFAULT 0
+);
