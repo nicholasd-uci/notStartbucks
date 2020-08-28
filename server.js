@@ -1,3 +1,4 @@
+// npm init -y , i , mysql1, express
 const express = require('express')
 const { join } = require('path')
 
@@ -9,8 +10,10 @@ app.use(express.json())
 
 app.use(require('./routes'))
 
-// force .sync(force: true) --> then remove it after you have set up path in userRoutes.js folder.
+
 require('./models')
+
+// force .sync(force: true) --> then remove it after you have set up path in userRoutes.js folder.
 require('./db').sync()
   .then(() => app.listen(3000))
   .catch(err => console.log(err))
