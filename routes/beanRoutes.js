@@ -8,11 +8,12 @@ router.get('/beans', (req, res) => {
     .catch(err => console.log(err))
 })
 
-// POST one pet
-router.post('/beans', (req, res) => {
-    Bean.create(req.body)
-      .then(beans => res.json(beans))
-      .catch(err => console.log(err))
-  })
 
 module.exports = router
+
+// POST one bean
+// router.post('/beans', (req, res) => {
+//   Bean.create(req.body)
+//     .then(beans => res.json(beans))
+//     .catch(err => console.log(err))
+// })

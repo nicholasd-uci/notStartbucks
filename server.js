@@ -11,9 +11,9 @@ app.use(express.json())
 app.use(require('./routes'))
 
 
-require('./models')
+// require('./models')
 
 // force .sync(force: true) --> then remove it after you have set up path in userRoutes.js folder.
 require('./db').sync()
-  .then(() => app.listen(3000))
+  .then(() => app.listen(process.env.PORT || 3000))
   .catch(err => console.log(err))
